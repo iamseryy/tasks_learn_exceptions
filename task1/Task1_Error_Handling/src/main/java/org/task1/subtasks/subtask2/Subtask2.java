@@ -36,7 +36,7 @@ public class Subtask2 {
         scanner.close();
     }
 
-    public static Integer[] subtract(int[] arr1, int[] arr2){
+    private static Integer[] subtract(int[] arr1, int[] arr2){
         if(arr1.length != arr2.length){
            return new Integer[]{null, -1};
         }

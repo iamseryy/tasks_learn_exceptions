@@ -24,7 +24,7 @@ public class Subtask3 {
         scanner.close();
     }
 
-    public static Double[] divide(int[] arr1, int[] arr2){
+    private static Double[] divide(int[] arr1, int[] arr2){
         if(arr1.length != arr2.length){
             throw new RuntimeException("Error! Array sizes are not equal");
         }

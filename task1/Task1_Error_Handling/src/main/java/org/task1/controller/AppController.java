@@ -12,7 +12,7 @@ public class AppController {
         System.out.println("\nExceptions in programming and their handling\n");
         System.out.println("1. Subtask 1 - Demo exceptions ");
         System.out.println("2. Subtask 2 - Arrays subtraction");
-        System.out.println("3. Subtask 2 - Arrays division");
+        System.out.println("3. Subtask 3 - Arrays division");
         System.out.print("\nChoose your option: ");
         if (scanner.hasNextInt()){
             int option = scanner.nextInt();
