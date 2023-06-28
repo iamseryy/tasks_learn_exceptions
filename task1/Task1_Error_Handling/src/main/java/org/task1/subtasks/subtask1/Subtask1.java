@@ -1,4 +1,4 @@
-package org.task1.subtasks.subtasks1;
+package org.task1.subtasks.subtask1;
 
 import java.util.Scanner;
 
@@ -9,17 +9,21 @@ public class Subtask1 {
         System.out.println("Demo exceptions:");
         System.out.println("1. InputMismatchException");
         System.out.println("2. StackOverflowError");
+        System.out.println("3. NumberFormatException");
         System.out.print("\nChoose your option: ");
         if (scanner.hasNextInt()){
             int option = scanner.nextInt();
             switch (option){
                 case 1:
-                    System.out.println("Your number is: " + input("\nInput number: "));
+                    System.out.println("Your number is: " + demoInputMismatchException("\nInput number: "));
                     break;
                 case 2:
-                    stackOverflowError();
+                    demoStackOverflowError();
                     break;
                 case 3:
+                    System.out.print("\nInput number: ");
+                    System.out.println("Your number is: " + demoNumberFormatException(scanner.next()));
+
                     break;
                 default:
                     System.out.println("Invalid!\n");
@@ -29,25 +33,24 @@ public class Subtask1 {
         } else{
                 System.out.println("Invalid!\n");
         }
+
+        scanner.close();
     }
 
     // method for Demo InputMismatchException
-    public static int input(String message) {
+    public static int demoInputMismatchException(String message) {
         System.out.print(message);
-        Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
-        }
+    }
 
     // method for Demo StackOverflowError
-    static void stackOverflowError(){
-        stackOverflowError();
+    static void demoStackOverflowError(){
+        demoStackOverflowError();
     }
 
-    static void test(){
-        label:{
-            
-        }
+    // method for Demo NumberFormatException
+    static Integer demoNumberFormatException(String str){
+        return Integer.parseInt(str);
     }
-
 }
 
