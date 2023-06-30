@@ -1,9 +1,10 @@
 package org.task2.subtasks.subtask1;
 
-import java.util.Scanner;
+import org.task2.util.Input;
 
 public class Subtask1 {
-    static Scanner scanner = new Scanner(System.in);
+    public static Input input = Input.getInstance();
+
     public static void start(){
         System.out.println("Your number is: " + input("\nInput float number: "));
     }
@@ -11,11 +12,11 @@ public class Subtask1 {
     private static float input(String message){
         while (true){
             System.out.print(message);
-            if (scanner.hasNextFloat()) {
-                return scanner.nextFloat();
+            if (input.hasNextFloat()) {
+                return input.nextFloat();
             } else {
                 System.out.println("Invalid! Try again");
-                scanner.next();
+                input.next();
             }
         }
     }
