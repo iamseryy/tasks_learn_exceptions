@@ -12,8 +12,7 @@ public class Subtask1 {
         while (true){
             System.out.print(message);
             if (scanner.hasNextFloat()) {
-                float number = scanner.nextFloat();
-                return number;
+                return scanner.nextFloat();
             } else {
                 System.out.println("Invalid! Try again");
                 scanner.next();

@@ -1,6 +1,7 @@
 package org.task2.controller;
 
 import org.task2.subtasks.subtask1.Subtask1;
+import org.task2.subtasks.subtask4.Subtask4;
 
 import java.util.Scanner;
 
@@ -26,7 +27,7 @@ public class AppController {
 
                     break;
                 case 4:
-
+                    Subtask4.start();
                     break;
                 default:
                     System.out.println("Invalid!\n");
@@ -38,6 +39,5 @@ public class AppController {
         }
 
         scanner.close();
-
     }
 }
