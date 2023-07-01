@@ -11,7 +11,8 @@ public class Subtask2 {
             double catchedRes1 = intArray[8] / d;
             System.out.println("catchedRes1 = " + catchedRes1);
         } catch (ArithmeticException
-                 // fix catch
+                 // Добавлено исключение ArrayIndexOutOfBoundsException,
+                 // т.к. потенциальная ситуация выхода за пределы массива
                  | ArrayIndexOutOfBoundsException e) {
             System.out.println("Catching exception: " + e);
         }
