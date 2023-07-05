@@ -27,8 +27,12 @@ public class PeopleImpl implements People {
 
     @Override
     public void add(Person person) {
+        if(this.people.contains(person)){
+            return;
+        }
+
         this.people.add(person);
-        FileUtils.writeFile("\n" + person.toString(),
+        FileUtils.writeFile( person.toString() + "\n",
                 new File(AppConfig.getPath("path.database") + "/" + person.surname()), true);
     }
 
