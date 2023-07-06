@@ -1,5 +1,6 @@
 package org.task3.service.impl;
 
+import org.task3.exception.DataBaseException;
 import org.task3.model.Person;
 import org.task3.repository.People;
 import org.task3.repository.impl.PeopleImpl;
@@ -16,7 +17,7 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public void add(Person person) {
+    public void add(Person person) throws DataBaseException {
         people.add(person);
     }
 }

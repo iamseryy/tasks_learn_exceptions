@@ -1,6 +1,7 @@
 package org.task3.repository.impl;
 
 import org.task3.config.AppConfig;
+import org.task3.exception.DataBaseException;
 import org.task3.model.Person;
 import org.task3.repository.People;
 import org.task3.utils.FileUtils;
@@ -26,7 +27,7 @@ public class PeopleImpl implements People {
     }
 
     @Override
-    public void add(Person person) {
+    public void add(Person person) throws DataBaseException {
         if(this.people.contains(person)){
             return;
         }
@@ -47,13 +48,8 @@ public class PeopleImpl implements People {
 
         for (String line: data) {
             String[] values = line.split("><");
-            String name = values[1];
-            String surname = values[0].replace("<", "");
-            String patronymic = values[2];
-            values[3] = values[3].replace(">", "");
-            long phoneNumber = Long.parseLong(values[3]);
-
-            people.add(new Person(name, surname, patronymic, phoneNumber));
+            people.add(new Person(values[1], values[0].replace("<", ""), values[2],
+                    values[3].replace(">", "")));
         }
 
         return people;
