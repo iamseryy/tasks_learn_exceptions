@@ -8,8 +8,6 @@ import org.task3.utils.FileUtils;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.HashSet;
 
 public class PeopleImpl implements People {

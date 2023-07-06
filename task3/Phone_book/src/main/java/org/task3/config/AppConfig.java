@@ -2,7 +2,6 @@ package org.task3.config;
 
 import org.task3.controller.AppController;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
